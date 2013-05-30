@@ -25,6 +25,10 @@ PPM.prototype.getData = function(){
             });
         });
         self.onMapAll();
+    })
+    .done(function(){
+        airports.getData();
+        pointes.onMapAll();
     });
 };
 

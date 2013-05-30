@@ -11,10 +11,6 @@ function init () {
             behaviors: ['default', 'scrollZoom']
         });
     map.controls.add('zoomControl');
-    
+
     pointes.getData();
-    airports.getData();
-    routes.getData();
-    pointes.onMapAll();
-    airports.onMapAll();
 }

@@ -50,6 +50,10 @@ Airports.prototype.getData = function(){
             });
         });
         self.onMapAll();
+    })
+    .done(function(){
+        routes.getData();
+        airports.onMapAll();
     });
 };
 
