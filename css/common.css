@@ -1,0 +1,24 @@
+/* 
+    Document   : common
+    Created on : 09.05.2013, 21:06:23
+    Author     : Саня
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+#map {
+    height: 600px;
+}
+
+#mapWrapper {
+    
+}
