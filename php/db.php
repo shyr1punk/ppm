@@ -1,8 +1,9 @@
 <?php
     header('Content-type: application/json');
     header('Content-Type: text/html; charset=utf-8');
+    require_once "Config.php";
     require_once "Mysql.php";
-    $DB = DbSimple_Generic::connect("mysql://aerobaseru_urls:C0caC0la@localhost/aerobaseru_urls");
+    $DB = DbSimple_Generic::connect(DBCONFIG);
     $DB->query('SET NAMES utf8');
     if($_GET["type"]=="ppm"){
         $rows = $DB->select('SELECT * FROM cities where population >= 100');
