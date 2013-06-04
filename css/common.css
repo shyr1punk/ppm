@@ -44,3 +44,7 @@ body {
 .routeTitle{
     float: left;
 }
+
+.btnOnMap{
+    margin: 10px;
+}

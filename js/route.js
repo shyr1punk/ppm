@@ -22,7 +22,7 @@ Route.prototype.onMap = function(){
 };
 
 Route.prototype.onPanel = function(){
-    var r = '<div id="route' + this.id + '" class="alert alert-info"><div><h5 class="routeTitle">Маршрут №' + this.id + '</h5><button class="btn btnOnMap" onClick="routes.items[' + this.id + '].onMap();">На карту</button></div><br />';
+    var r = '<div id="route' + this.id + '" class="alert alert-info"><div><h5 class="routeTitle">Маршрут №' + this.id + '</h5><button class="btn btnOnMap btn-success btn-mini" onClick="routes.items[' + this.id + '].onMap();">На карту</button></div><br />';
     r += 'Вылет: ' + airports.airportlist[this.begin].name + "<br />";
     this.points.forEach(function(ppm) {
         r += pointes.ppmlist[ppm].name + "<br />";
