@@ -22,7 +22,7 @@ Route.prototype.onMap = function(){
 };
 
 Route.prototype.onPanel = function(){
-    var r = '<div id="route' + this.id + '" class="alert alert-info"><h5>Маршрут №' + this.id + '<h5>';
+    var r = '<div id="route' + this.id + '" class="alert alert-info"><div><h5 class="routeTitle">Маршрут №' + this.id + '</h5><button class="btn btnOnMap" onClick="routes.items[' + this.id + '].onMap();">На карту</button></div><br />';
     r += 'Вылет: ' + airports.airportlist[this.begin].name + "<br />";
     this.points.forEach(function(ppm) {
         r += pointes.ppmlist[ppm].name + "<br />";
@@ -121,9 +121,17 @@ Routes.prototype.getData = function(){
                 id : val.id,
                 begin : val.begin,
                 end : val.end,
-                points : val.points,
-                coodrs : []
+                points : val.points 
             });
+            l[val.id].coords = function(){
+                    var c = [[airports.airportlist[val.begin].lat,airports.airportlist[val.begin].lng]];
+                    var l = val.points.length;
+                    for(var i=0;i<l;i++) {
+                        c.push([pointes.ppmlist[val.points[i]].lat,pointes.ppmlist[val.points[i]].lng]);
+                    }
+                    c.push([airports.airportlist[val.end].lat,airports.airportlist[val.end].lng]);
+                    return c;
+                }();
             l[val.id].onPanel();
         });
     });

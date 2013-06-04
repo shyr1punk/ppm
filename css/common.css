@@ -19,9 +19,8 @@ html {
 }
 
 body {
-    height: 100%;
+    height: 90%;
     padding-top: 60px;
-    padding-bottom: 40px;
 }
 
 #map {
@@ -33,10 +32,15 @@ body {
 }
 
 #mapWrapper {
-    height: 85%;
+    height: 100%;
 }
 
 #routeList {
-    height: 70%;
+    height: 85%;
     overflow: auto;
+    padding-right: 20px;
+}
+
+.routeTitle{
+    float: left;
 }
