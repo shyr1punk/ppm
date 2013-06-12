@@ -112,11 +112,9 @@ Routes.prototype.saveRoute = function() {
 };
 
 Routes.prototype.getData = function(){
-    var self = this;
     var l = this.items;
-    $.getJSON('http://brothersdesign.ru/ppm/php/db.php?type=routes', function(data) {
+    $.getJSON('php/db.php?type=routes', function(data) {
         $.each(data, function(key, val) {
-            console.log(val);
             l[val.id] = new Route({
                 id : val.id,
                 begin : val.begin,

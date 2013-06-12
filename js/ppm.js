@@ -14,7 +14,7 @@ function PPM(args){
 PPM.prototype.getData = function(){
     var self = this;
     var l = this.ppmlist;
-    $.getJSON('http://brothersdesign.ru/ppm/php/db.php?type=ppm', function(data) {
+    $.getJSON('ppm/php/db.php?type=ppm', function(data) {
         $.each(data, function(key, val) {
             l[val.ID] = new Coordinates({
                 id:val.ID,

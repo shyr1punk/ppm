@@ -40,7 +40,7 @@ function Airports(args){
 Airports.prototype.getData = function(){
     var self = this;
     var l = this.airportlist;
-    $.getJSON('http://brothersdesign.ru/ppm/php/db.php?type=airport', function(data) {
+    $.getJSON('ppm/php/db.php?type=airport', function(data) {
         $.each(data, function(key, val) {
             l[val.code] = new Airport({
                 code:val.code,
